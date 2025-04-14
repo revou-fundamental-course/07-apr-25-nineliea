@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="header">
+        <button class="home">Home</button>
+        <button class="search">Search</button>
+        <button class="logout">Log Out</button>
+    </nav>
+    <header>
+        <h1>Hi <span id="name">User</span>! Welcome to the Website</h1>
+        <p>This is a paragraph?</p>
+        <br>
+    </header>
+    
+    <br><br><br><br>
+
+    <main style="display: flex;flex-direction: row;">
+        <div style="display: flex;flex: 1;">
+            <form name="message-form" onsubmit="return validateForm()">
+                <input required type="text"placeholder="Nama Anda" id="name-input" name="name-input">
+                <button id="submit" type="submit">Submit</button>
+                <p id="error-name"></p>
+            </form>
+        </div>
+        <div style="display: flex;flex: 1;justify-content: center;align-items: center;">          
+            <table>
+                <tr>
+                    <th>Nama</th>
+                    <th>Tanggal Lahir</th>
+                    <th>Jenis Kelamin</th>
+                    <th>Pesan</th>
+                    <th>Profile</th>
+                    <th>Hapus</th>
+                </tr>
+
+                <tr>
+                    <td>Tono</td>
+                    <td>12 Januari 1996</td>
+                    <td>Laki-laki</td>
+                    <td>Wallahi we are so cooked</td>
+                    <td><a href="www.google.com">Klik Disini</a></td>
+                    <td></td>
+                </tr>
+            </table>  
+        </div>
+    </main>
+
+    <footer style="display: flex;justify-content: flex-end;">
+        <p>RevoU 2023</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

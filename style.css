@@ -1,0 +1,35 @@
+.header{
+    display: flex;
+    border: 2px ridge #000000;
+    padding: 10px;
+    justify-content: flex-end;
+    background-color: aliceblue;
+}
+
+.header > button{
+    background-color: cadetblue;
+    padding: 10px;
+    border-radius: 10%;
+    margin-inline-end: 15px;
+    border: 2px solid cornflowerblue;
+}
+
+.header > button:hover{background-color: #b2ffec;}
+
+table{
+    border-top: 1px solid gray;
+}
+th{
+    border-bottom: lightgray 1px solid;
+    border-collapse: collapse;
+    padding: 10px;
+    justify-content: center; 
+    background: lightgray;
+}
+
+td{
+    border-bottom: gray 1px solid;
+    border-collapse: collapse;
+    padding: 10px;
+    justify-content: center;
+}
