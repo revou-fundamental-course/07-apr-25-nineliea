@@ -13,9 +13,8 @@
         <button class="logout">Log Out</button>
     </nav>
     <header>
-        <h1>Hi <span id="name">User</span>! Welcome to the Website</h1>
+        <h1>Hi <span id="userInitial">User</span>! Welcome to the Website</h1>
         <p>This is a paragraph?</p>
-        <br>
     </header>
     
     <br><br><br><br>
@@ -24,7 +23,7 @@
         <div style="display: flex;flex: 1;">
             <form name="message-form" onsubmit="return validateForm()">
                 <input required type="text"placeholder="Nama Anda" id="name-input" name="name-input">
-                <button id="submit" type="submit">Submit</button>
+                <button id="submitform" type="submit">Submit</button>
                 <p id="error-name"></p>
             </form>
         </div>

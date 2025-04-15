@@ -1,17 +1,6 @@
-function replaceName () {
-    let name = prompt("Siapakan nama anda?", "")
-    if (prompt ==""){
-        alert "Nama tidak boleh kosong!"
-
-        return false
-    }
-    else {
-        document.getElementById('name').innerHTML = nama
-    }
-}
-
-document.getElementById('submit').addEventListener('click', function () {
-    replaceName()
+const savedInitial = localStorage.getItem("userInitial");
+if (savedInitial){
+    document.getElementById("userInitial").innerHTML=savedInitial;
 }
 
 function validateForm () {
