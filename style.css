@@ -1,20 +1,137 @@
+html{
+    scroll-behavior: smooth !important;
+    scroll-padding-top: 80px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in; 
+    background-color: black;
+}
+
+body.loaded{
+    opacity: 1;
+}
+
+.logo{
+    width:50px;
+    height: 50px;
+    display: flex;
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.header > h1 {
+    color: white;
+    display: flex;
+    font-size: 20px;
+    margin-inline-end: auto;
+    font-family: monospace;
+}
 .header{
     display: flex;
-    border: 2px ridge #000000;
     padding: 10px;
     justify-content: flex-end;
-    background-color: aliceblue;
+    position: sticky;
+    top: 0;
+    background-color: rgba(0,0,0,.3);    
+}
+a{
+    color: white;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+.wallpaper-1{
+    background-image: url(assets/space\ background.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 50px;
 }
 
-.header > button{
-    background-color: cadetblue;
+.header > a{
+    font-family:Verdana;
+    color: white;
+    text-shadow: 0px 0px 10px black;
+    opacity: 0.8;
     padding: 10px;
-    border-radius: 10%;
-    margin-inline-end: 15px;
-    border: 2px solid cornflowerblue;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-inline-end: 20px;
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
-.header > button:hover{background-color: #b2ffec;}
+.header > a:hover{
+    color: white;
+    font-size: 15px;
+    opacity: 1;
+    border-radius: 10px;
+}
+
+header>h1{
+    width: 100%;
+    margin-top: 150px;
+    height: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: white;
+    font-family: monospace;
+    transition: ease 1s repeat;
+    text-shadow: 0 0 10px black;
+}
+
+.aboutus{
+    font-family: Courier;
+    color: white;
+    text-align: justify;
+    padding: 30px;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: rgba(0,0,0,.7);
+    border-radius: 10px;
+    line-height: 1.5;
+}
+.ourprofile{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.ourprofile > h1 {
+    font-family: monospace;
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+}
+
+.vision, .mission{
+    color: white;
+}
+
+.vision >h2, .mission > h2{
+    font-family: monospace;
+    text-align: center;
+    font-size: 24px;
+}
+
+.vision>p, .mission>p{
+    font-family: courier;
+    padding: 10%;
+    text-align: justify;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: rgba(252, 101, 184,.7);
+    border-radius: 20px;
+}
 
 table{
     border-top: 1px solid gray;

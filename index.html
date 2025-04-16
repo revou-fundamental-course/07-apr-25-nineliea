@@ -7,18 +7,52 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="header">
-        <button class="home">Home</button>
-        <button class="search">Search</button>
-        <button class="logout">Log Out</button>
-    </nav>
-    <header>
-        <h1>Hi <span id="userInitial">User</span>! Welcome to the Website</h1>
-        <p>This is a paragraph?</p>
-    </header>
-    
-    <br><br><br><br>
+    <div class="wallpaper-1">
+        <nav class="header">
+            <img src="assets/COSMIC QUEST.png" class="logo">
+            <h1>COSMICQUEST</h1>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="#bookmark2" class="nav-link">Our Profile</a>
+            <a href="#bookmark3" class="nav-link">Portfolio</a>
+            <a href="#bookmark4" class="nav-link">Message Us</a>
+          </nav>
+          
+        <header>
+            <h1>Hi <span id="userInitial">User</span>! Welcome to the Website!</h1>
+            <p class="aboutus">Welcome to CosmicQuest, your gateway to the universe!
+                Whether you're a curious stargazer or a dedicated space enthusiast,
+                this is the place where cosmic wonders come to life! 
+                Explore planets, galaxies, black holes, and the latest space missions all 
+                in one interactive and visually stunning platform.
+                Dive into the mysteries of the cosmos and discover how 
+                space continues to inspire innovation, exploration, and awe.</p>
+        </header>
+    </div>
 
+    <section class="ourprofile" id="bookmark2">
+        <h1>Our Profile</h1>
+        <div style="display: flex; flex-direction: row; gap: 2rem;">
+          
+          <div style="flex: 1;" class="vision">
+            <h2>Vision</h2>
+            <p>
+              To become the leading virtual gateway to space, where curiosity meets discovery,
+              and the stars are just a click away.
+            </p>
+          </div>
+      
+          <div style="flex: 1;" class="mission">
+            <h2>Mission</h2>
+            <p>
+              To ignite a passion for space by connecting people to the wonders of the universe 
+              in an innovative, interactive, and inclusive way.
+            </p>
+          </div>
+      
+        </div>
+      </section>
+      
+    
     <main style="display: flex;flex-direction: row;">
         <div style="display: flex;flex: 1;">
             <form name="message-form" onsubmit="return validateForm()">
