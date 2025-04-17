@@ -2,26 +2,16 @@ window.addEventListener("load", () => {
     document.body.classList.add("loaded");
   });
 
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', function (e) {
-      const href = this.getAttribute('href');
-  
-      if (href.startsWith('#')) {
-        e.preventDefault();
-        const target = document.querySelector(href);
-  
-        if (target) {
-          const offset = 100; // same as your scroll-padding-top
-          const topPos = target.offsetTop - offset;
-  
-          window.scrollTo({
-            top: topPos,
-            behavior: 'smooth'
-          });
-        }
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const section = document.getElementById(targetId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
       }
     });
-  });
+});
   
 const savedInitial = localStorage.getItem("userInitial");
 if (savedInitial){
