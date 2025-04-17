@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- TOLONG BUKA LANDING PAGE DULU SEBELUM INDEX SUPAYA BISA ACCESS USER INITIALNYA DULU :D -->
+
+    <!-- Home Section -->
+    <div class="home-section">
+        <!-- Navigation -->
+        <nav class="navigation">
+            <img src="assets/COSMIC QUEST.png" class="logo">
+            <h1>COSMICQUEST</h1>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="#bookmark2" class="nav-link">Our Profile</a>
+            <a href="#bookmark3" class="nav-link">Our HQ</a>
+            <a href="#bookmark4" class="nav-link">Message Us</a>
+          </nav>
+
+          <!-- Banner Content -->
+          <div class = banner-container>
+            <div class="banner-img banner-1 active"></div>
+            <div class="banner-img banner-2"></div>
+            <div class="banner-img banner-3"></div>
+          </div>
+        
+        <!-- Welcoming Speech -->
+        <header>
+            <h1>Hi <span id="userInitial">User</span>! Welcome to the Website!</h1>
+            <p class="aboutus">Welcome to CosmicQuest, your gateway to the universe!
+                CosmicQuest is an interactive digital platform designed to bring the universe closer to you. 
+                Whether you're an aspiring astronomer, a passionate space enthusiast, or simply curious about the cosmos, 
+                CosmicQuest offers a gateway to explore planets, galaxies, black holes, and the latest space discoveries 
+                in a visually immersive environment. We blend science, creativity, and technology to make space learning engaging, 
+                accessible, and inspiring. With regularly updated content and interactive features, we aim to spark curiosity, 
+                foster discovery, and connect people with the wonders beyond our world.</p>
+        </header>
+    </div>
+    
+    <!-- Our Profile Section -->
+    <section class="ourprofile" id="bookmark2">
+        <h1>Our Profile</h1>
+        <div class="profile-container">
+          <div class="vision">
+            <h2>Vision</h2>
+            <p>To become the leading virtual gateway to space, where curiosity meets discovery,
+                and the stars are just a click away.</p>
+          </div>
+          <div class="mission">
+            <h2>Mission</h2>
+            <p>To ignite a passion for space by connecting people to the wonders of the universe 
+                in an interactive way.</p>
+          </div>
+        </div>
+    </section>
+
+    <!-- OUR HEADQUARTERS PAGE -->
+    <section class="headquarters" id="bookmark3">
+        <h2>Our Headquarters</h2>
+        <div class="hq-container">
+            <!-- Earth Headquarters -->
+            <div class="hq-card">
+                <div class="hq-image">
+                    <img src="assets/earth hq.png" alt="Earth Headquarters">
+                </div>
+                <div class="hq-location">
+                    <h3>Earth</h3>
+                    <p>123 Cosmic Street, Galaxy City, Planet Earth</p>
+                </div>
+            </div>
+    
+            <!-- Mars Headquarters -->
+            <div class="hq-card">
+                <div class="hq-image">
+                    <img src="assets/mars hq.png" alt="Mars Headquarters">
+                </div>
+                <div class="hq-location">
+                    <h3>Mars</h3>
+                    <p>456 Red Crater, Martian Plains, Mars</p>
+                </div>
+            </div>
+    
+            <!-- Venus Headquarters -->
+            <div class="hq-card">
+                <div class="hq-image">
+                    <img src="assets/venus hq.png" alt="Venus Headquarters">
+                </div>
+                <div class="hq-location">
+                    <h3>Venus</h3>
+                    <p>789 Venusian Base, Venera Mountains, Venus</p>
+                </div>
+            </div>
+    
+            <!-- Jupiter Headquarters -->
+            <div class="hq-card">
+                <div class="hq-image">
+                    <img src="assets/jupiter hq.png" alt="Jupiter Headquarters">
+                </div>
+                <div class="hq-location">
+                    <h3>Jupiter</h3>
+                    <p>1010 Gas Giant, Great Red Spot, Jupiter</p>
+                </div>
+            </div>
+    
+            <!-- Coming Soon Headquarters -->
+            <div class="hq-card coming-soon">
+                <div class="hq-image">
+                    <img src="assets/COMING SOON.png" alt="Coming Soon">
+                </div>
+                <div class="hq-location">
+                    <h3>Coming Soon</h3>
+                    <p>Stay tuned for our upcoming headquarters locations!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- MESSAGE US SECTION -->
+    <section class="message-us" id="bookmark4">
+        <h2>Message Us</h2>
+        <div class="form-table-container">
+            <!-- FORM SECTION (LEFT) -->
+            <form id="messageForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" minlength="4">
+                <span class="error-msg" id="name-error"></span>
+            
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob">
+                <span class="error-msg" id="dob-error"></span>
+            
+                <label for="gender">Gender:</label>
+                <div class="gender-options">
+                    <label><input type="radio" name="gender" value="Male"> Male</label>
+                    <label><input type="radio" name="gender" value="Female"> Female</label>
+                </div>
+                <span class="error-msg" id="gender-error"></span>
+            
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" minlength="10"></textarea>
+                <span class="error-msg" id="message-error"></span>
+            
+                <button type="submit">Submit</button>
+            </form>
+            
+            <!-- TABLE OUTPUT (RIGHT) -->
+            <div id="outputBox" class="output-box">
+                <table id="messageTable">
+                    <thead>
+                        <tr>
+                            <th>Current Time</th>
+                            <th>Name</th>
+                            <th>Date of Birth</th>
+                            <th>Gender</th>
+                            <th>Message</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- SPACE BUAT NAMBAH ROWS MANTAP -->
+                    </tbody>
+                </table>  
+            </div>
+        </div>
+    </section>
+    
+    <!-- FOOTER SECTION -->
+    <footer class="site-footer">
+        <div class="footer-content">
+          <p>&copy; 2025 <strong>CosmicQuest</strong>. All rights reserved.</p>
+      
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="#bookmark2">Our Profile</a>
+            <a href="#bookmark3">Our HQ</a>
+            <a href="#bookmark4">Message Us</a>
+          </div>
+      
+          <div class="social-links">
+            <a href="https://www.instagram.com/nicolejocelyn_/"><img src="assets/instagram icon.png" alt="Instagram" target="_blank"/></a>
+            <a href="https://x.com/home"><img src="assets/twitter icon.png" alt="X" target="_blank"/></a>
+            <a href="https://github.com/revou-fundamental-course/07-apr-25-nineliea"><img src="assets/github icon.png" target="_blank" alt="GitHub" /></a>
+          </div>
+      
+          <p class="credits">Designed & developed by <strong>Nicole Jocelyn</strong> 🌌</p>
+        </div>
+      </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
