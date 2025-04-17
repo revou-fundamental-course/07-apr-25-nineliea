@@ -1,7 +1,9 @@
+// UNTUK TRANSITION 
 window.addEventListener("load", () => {
     document.body.classList.add("loaded");
   });
 
+// UNTUK NAVIGATION WITHOUT RELOAD
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
@@ -12,12 +14,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       }
     });
 });
-  
+
+// UNTUK MUNCULIN USERNAME KE WELCOMING SPEECH
 const savedInitial = localStorage.getItem("userInitial");
 if (savedInitial){
     document.getElementById("userInitial").innerHTML=savedInitial;
 }
 
+// UNTUK IMAGE CAROUSEL TRANSITION
 let banners = document.querySelectorAll(".banner-img");
   let current = 0;
 
@@ -25,9 +29,11 @@ let banners = document.querySelectorAll(".banner-img");
     banners[current].classList.remove("active");
     current = (current + 1) % banners.length;
     banners[current].classList.add("active");
-  }, 3000); // change image every 3 seconds
+  }, 3000); // TIAP 3 DETIK GANTI GAMBAR
 
-function validateForm () {
+
+// UNTUK VALIDASI FORM
+  function validateForm () {
     const nama = document.forms["message-form"]["name-input"].value
 
     if (nama == ""){
@@ -42,28 +48,29 @@ function validateForm () {
     }
 }
 
+// UNTUK SUBMIT FORM TANPA RELOAD WEBSITE
 document.getElementById('messageForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
-    // Ambil elemen input
+    // AMBIL ELEMEN INPUT FORM
     const name = document.getElementById('name');
     const dob = document.getElementById('dob');
     const gender = document.querySelector('input[name="gender"]:checked');
     const message = document.getElementById('message');
 
-    // Ambil elemen span untuk error
+    // Ambil ELEMEN SPAN ERROR MESSAGE
     const nameErr = document.getElementById('name-error');
     const dobErr = document.getElementById('dob-error');
     const genderErr = document.getElementById('gender-error');
     const messageErr = document.getElementById('message-error');
 
-    // Reset error messages
+    // RESET ERROR MESSAGE
     nameErr.textContent = '';
     dobErr.textContent = '';
     genderErr.textContent = '';
     messageErr.textContent = '';
 
-    // Validasi manual
+    // VALIDASI ERROR MESSAGE
     let valid = true;
 
     if (name.value.trim() === '') {
@@ -86,9 +93,9 @@ document.getElementById('messageForm').addEventListener('submit', function(e) {
         valid = false;
     }
 
-    if (!valid) return; // Hentikan jika ada error
+    if (!valid) return; // STOP KALO ADA ERROR
 
-    // Tambahkan ke tabel jika semua valid
+    // UNTUK TAMBAHIN HASIL INPUT FORM KE TABLE OUTPUT
     const currentTime = new Date().toLocaleString();
     const table = document.getElementById('messageTable').querySelector('tbody');
     const newRow = table.insertRow();
@@ -102,11 +109,11 @@ document.getElementById('messageForm').addEventListener('submit', function(e) {
         <td><button onclick="deleteRow(this)">Delete</button></td>
     `;
 
-    // Reset form
+    // UNTUK RESET FORM
     document.getElementById('messageForm').reset();
 });
 
-// Fungsi hapus baris
+// UNTUK TOMBOL DELETE DI TABLE OUTPUT
 function deleteRow(button) {
     const row = button.parentNode.parentNode;
     row.remove();

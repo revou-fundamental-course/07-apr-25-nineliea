@@ -130,6 +130,7 @@ header{
     text-shadow: 0 0 10px black;
 }
 
+/* ABOUT US SECTION */
 .aboutus{
     font-family: Courier;
     color: white;
@@ -224,7 +225,7 @@ header{
     padding-bottom: 30px;
 }
 
-/* Container for all headquarters cards */
+/* CONTAINER HEADQUATERS */
 .hq-container {
     display: flex;
     flex-wrap: wrap;
@@ -232,7 +233,6 @@ header{
     gap: 20px;
 }
 
-/* Styling for each headquarters card */
 .hq-card {
     width: 250px;
     background-color: rgba(0, 0, 0, 0.8);
@@ -243,11 +243,12 @@ header{
 }
 
 .hq-card:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
+    transform: scale(1.05);
     opacity: 1;
     background-color: #2d2c2a;
 }
 
+/* HEADQUARTERS CONTENT */
 .hq-image img {
     width: 100%;
     height: 200px;
@@ -255,7 +256,6 @@ header{
     margin-top: 20px;
 }
 
-/* Styling for the location text inside each card */
 .hq-location {
     padding: 15px;
     font-family: 'Courier New';
@@ -272,7 +272,6 @@ header{
     line-height: 1.4;
 }
 
-/* Special styling for the "Coming Soon" card */
 .coming-soon {
     background-color: rgba(0, 0, 0,);
 }
@@ -285,7 +284,8 @@ header{
     color: #fff;
 }
 
-/* Main container for form and table */
+
+/* FORM AND TABLE SECTION */
 .form-table-container {
     display: flex;
     gap: 100px;
@@ -296,7 +296,7 @@ header{
     margin-right: 100px;
 }
 
-/* Styling for the form */
+/* FORM SECTION */
 .message-us h2{
     margin-top: 50px;
     margin-left: 100px;
@@ -322,7 +322,7 @@ header{
     box-sizing: border-box;
 }
 
-/* Styling for the table box */
+/* OUTPUT TABLE SECTION */
 .output-box {
     background-color: white;
     padding-bottom: 10px;
@@ -335,12 +335,11 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    max-height: 550px;          /* fix tinggi box */
+    max-height: 550px;          
     overflow-y: auto;           /* scroll jika konten terlalu panjang */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* General styles for table */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -370,6 +369,7 @@ thead th {
     z-index: 1;
 }
 
+/* TOMBOL DELETE TABLE */
 td button {
     background-color: transparent;
     color: red;
@@ -385,7 +385,7 @@ td button:hover {
     color: darkred;
 }
 
-/* Other existing styles */
+/* FORM CONTENT */
 form label {
     font-weight: bold;
 }
@@ -419,6 +419,7 @@ form button:hover {
     background-color: #45a049;
 }
 
+/* FOOTER SECTION */
 .site-footer {
     background-color: #111;
     color: #ccc;
@@ -454,7 +455,8 @@ form button:hover {
     color: #fff;
     font-size: 13px;
 }
-  
+
+/* MEDIA SOSIAL */
 .social-links {
     display: flex;
     gap: 15px;
@@ -477,6 +479,7 @@ form button:hover {
     color: #aaa;
 }
 
+/* FORM VALIDATION ERROR */
 .error-msg {
     color: red;
     font-size: 13px;
@@ -484,6 +487,8 @@ form button:hover {
     margin-bottom: 10px;
     display: block;
 }
+
+/* MOBILE VIEW WEBSITE!!!!!!!!!!!!!! */
 
 @media (max-width: 768px) {
 

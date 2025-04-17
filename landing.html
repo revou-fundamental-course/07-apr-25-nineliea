@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
 </head>
-<style>
+<style> 
+/* CSS INTERNAL */
+
+    /* general design */
     body{
         display: flex;
         font-family:Verdana, sans-serif;
@@ -16,6 +19,8 @@
         background-position: center;
         background-size: cover no repeat;
     }
+    
+    /* design box */
     .wrapper{
         width: 300px;
         height: 230px;
@@ -33,6 +38,7 @@
         text-align: center;
     }
     
+    /* design input */
     .input-box{
         background-color: aliceblue;
         width: 100%;
@@ -52,6 +58,7 @@
         border-color: #007BFF;
     }
 
+    /* design tombol */
     .wrapper > form > .btn{
         background-color: aliceblue;
         width: 40%;
@@ -92,17 +99,19 @@
             
             const initial=document.getElementById("initialInput").value.trim();
             
+            // VALIDATION
             if (initial === ""){
                 alert("Please enter your initial before continuing");
                 document.getElementById("initialInput").focus();
                 return
             }
-
+            // UNTUK SIMPAN USERNAME
             localStorage.setItem("userInitial", initial)
 
+            // ARAHIN KE MAIN PAGE
             window.location.href = "index.html";
         });
-
+        
         document.getElementById("initialInput").addEventListener("input",()=>{
             if(document.getElementById("initialInput").value.trim()!== ""){
                 document.querySelector(".btn").classList.add("active");
