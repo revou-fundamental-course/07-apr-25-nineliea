@@ -99,15 +99,15 @@ body.loaded{
   }
 
   .banner-1 {
-    background-image: url(assets/space\ background.jpg);
+    background-image: url(assets/spacebackground.jpg);
   }
   
   .banner-2 {
-    background-image: url(assets/space\ background\ 2.jpg);
+    background-image: url(assets/spacebackground2.jpg);
   }
   
   .banner-3 {
-    background-image: url(assets/space\ background\ 3.jpeg);
+    background-image: url(assets/spacebackground3.jpeg);
   }
 
 /* WELCOMING SPEECH */
@@ -146,7 +146,7 @@ header{
 
 /* OUR PROFILE PAGE */
 .ourprofile{
-    background-image: url(assets/stars\ background.jpg);
+    background-image: url(assets/starsbackground.jpg);
     background-position: center;
     background-size: cover;
     gap: 0;
@@ -206,7 +206,7 @@ header{
     text-align: center;
     margin-top: 50px;
     padding: 20px;
-    background-image: url(assets/space\ headquarters.jpeg);
+    background-image: url(assets/spaceheadquarters.jpeg);
     background-position: center;
     background-size: cover;
     padding-top: 60px;
