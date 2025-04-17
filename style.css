@@ -143,69 +143,76 @@ header{
 }
 
 /* OUR PROFILE PAGE */
-
-.ourprofile, .ourheadquarters{
+.ourprofile{
     background-image: url(assets/stars\ background.jpg);
+    background-position: center;
+    background-size: cover;
     gap: 0;
-    height: 500px;
     background-position: contain;
     background-size: 80%;
     padding-top: 0;
+    margin-bottom: 100px;
+    align-items: stretch;
 }
 .ourprofile > h1 {
     font-family: monospace;
     font-size: 48px;
     text-align: center;
     color: white;
-    padding-top: 100px;
-  }
+    padding-top: 50px;
+}
   
-  .profile-container {
+.profile-container {
     display: flex;
-    flex-direction: row;
     gap: 6rem;
     padding: 0 10%;
     flex-wrap: wrap; /* make responsive */
-  }
+}
   
-  .vision, .mission {
+.vision, .mission {
     flex: 1 1 300px; /* responsive flex */
     color: white;
-  }
+}
   
-  .vision > h2, .mission > h2 {
+.vision > h2, .mission > h2 {
     font-family: monospace;
     text-align: center;
     font-size: 32px;
     margin-bottom: 1rem;
     text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
-  }
+}
   
-  .vision > p, .mission > p {
+.vision > p, .mission > p {
     font-family: Courier;
     padding: 2rem;
     text-align: justify;
     background-color: rgba(145, 43, 186, 0.7);
     border-radius: 20px;
     font-size: 20px;
-  }
+}
   
-  .vision > p:hover, .mission > p:hover {
+.vision > p:hover, .mission > p:hover {
     transform: scale(1.02);
     transition: transform 0.3s ease;
     box-shadow: 0px 0px 30px rgba(255, 255, 255, 1);
     background-color: rgb(174, 85, 221);
-    
-  }
+}
   
-/* Styling for the headquarters section */
+  
+/* OUR HEADQUARTERS PAGE */
 .headquarters {
     text-align: center;
     margin-top: 50px;
     padding: 20px;
-    background-color: #1a1a1a;
+    background-image: url(assets/space\ headquarters.jpeg);
+    background-position: center;
+    background-size: cover;
+    padding-top: 60px;
     color: white;
     border-radius: 10px;
+    padding-top: 50px;
+    align-items: stretch;
+    padding-bottom: 60px;
 }
 
 .headquarters h2 {
@@ -418,3 +425,139 @@ form button:hover {
     margin-bottom: 10px;
     display: block;
 }
+
+@media (max-width: 768px) {
+
+    /* Navbar */
+    .navigation {
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    .navigation h1 {
+      display: none;
+    }
+  
+    .nav-link {
+      margin-inline-start: auto;
+      padding: 8px 12px;
+      font-size: 12px;
+      text-align: center;
+    }
+  
+    /* Header & Banner */
+    header > h1 {
+      font-size: 32px;
+      word-wrap: break-word;      /* bantu wrap teks panjang */
+      word-break: break-word;     /* paksa putus kata panjang */
+    }
+  
+    .aboutus {
+      margin: 100px 100px;
+      font-size: 14px;
+      padding: 20px;
+    }
+  
+    .banner-container {
+      height: 60vh;
+    }
+  
+    .banner-img {
+      height: 100vh;
+    }
+  
+    /* Our Profile */
+    
+    .ourprofile{
+        background-position: 100%;
+    }
+
+    .profile-container {
+        gap: 6rem;
+        padding: 0 10%;
+        flex-wrap: wrap;
+    }
+    
+    .vision > p, .mission > p {
+        font-size: 14px;
+        padding: 15px
+    }
+    
+    .vision > h2, .mission > h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+    
+    .headquarters{
+        height: fit-content;
+        padding-bottom: 100px;
+    }
+    .headquarters h2 {
+        font-size: 24px;
+        padding-bottom: 20px;
+    }
+    
+    .hq-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .hq-card {
+        width: 100%;
+        max-width: 300px;
+        margin: auto;
+    }
+  
+    /* Message Us (form + table) */
+    .form-table-container {
+      flex-direction: column;
+      margin: 0 20px;
+      gap: 40px;
+    }
+  
+    .message-us h2 {
+      font-size: 28px;
+      text-align: center;
+      margin-left: 0;
+    }
+  
+    .message-us form,
+    .output-box {
+      width: 100%;
+      height: auto;
+      padding: 30px;
+    }
+  
+    .output-box {
+      max-height: 400px;
+      overflow-y: auto;
+    }
+  
+    table {
+      font-size: 12px;
+    }
+  
+    th, td {
+      max-width: 100px;
+      padding: 8px;
+    }
+  
+    form button {
+      width: 100%;
+      font-size: 16px;
+    }
+  
+    .gender-options {
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    /* Footer */
+    footer {
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+  
+}
+  
