@@ -1,3 +1,4 @@
+/* SMOOTH AND PAGE TRANSITION */
 html{
     scroll-behavior: smooth !important;
     scroll-padding-top: 80px;
@@ -8,12 +9,18 @@ body{
     padding: 0;
     opacity: 0;
     transition: opacity 1s ease-in; 
-    background-color: black;
+    background-color: rgb(0, 0, 0);
 }
 
 body.loaded{
     opacity: 1;
 }
+
+/* HOME AND NAVIGATION */
+.home-section {
+    position: relative;
+    height: 100vh;
+}  
 
 .logo{
     width:50px;
@@ -25,36 +32,27 @@ body.loaded{
     margin-bottom: auto;
 }
 
-.header > h1 {
+.navigation > h1 {
     color: white;
     display: flex;
     font-size: 20px;
     margin-inline-end: auto;
     font-family: monospace;
 }
-.header{
+.navigation{
     display: flex;
     padding: 10px;
     justify-content: flex-end;
     position: sticky;
     top: 0;
-    background-color: rgba(0,0,0,.3);    
+    background-color: rgba(0,0,0,.3);
+    z-index: 999;    
 }
 a{
     color: white;
     text-decoration: none;
     scroll-behavior: smooth;
-}
-.wallpaper-1{
-    background-image: url(assets/space\ background.jpg);
-    background-position: center;
-    background-size: cover;
-    padding-bottom: 50px;
-}
-
-.header > a{
     font-family:Verdana;
-    color: white;
     text-shadow: 0px 0px 10px black;
     opacity: 0.8;
     padding: 10px;
@@ -68,14 +66,58 @@ a{
     margin-bottom: auto;
 }
 
-.header > a:hover{
+a:hover{
     color: white;
     font-size: 15px;
     opacity: 1;
     border-radius: 10px;
 }
 
-header>h1{
+/* BANNER CAROUSEL */
+.banner-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1; /* so it stays behind text */
+  }
+  
+  .banner-img {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .banner-img.active {
+    opacity: 1;
+  }
+
+  .banner-1 {
+    background-image: url(assets/space\ background.jpg);
+  }
+  
+  .banner-2 {
+    background-image: url(assets/space\ background\ 2.jpg);
+  }
+  
+  .banner-3 {
+    background-image: url(assets/space\ background\ 3.jpeg);
+  }
+
+/* WELCOMING SPEECH */
+header{
+    margin: 0; /* Reset any margin */
+    padding: 0; /* Reset any padding */
+    position: relative;
+    z-index: 2;
+}
+
+  header>h1{
     width: 100%;
     margin-top: 150px;
     height: 30px;
@@ -97,56 +139,282 @@ header>h1{
     background-color: rgba(0,0,0,.7);
     border-radius: 10px;
     line-height: 1.5;
-}
-.ourprofile{
-    background-color: black;
-    margin: 0;
-    padding: 0;
+    margin-bottom: 0;
 }
 
+/* OUR PROFILE PAGE */
+
+.ourprofile, .ourheadquarters{
+    background-image: url(assets/stars\ background.jpg);
+    gap: 0;
+    height: 500px;
+    background-position: contain;
+    background-size: 80%;
+    padding-top: 0;
+}
 .ourprofile > h1 {
     font-family: monospace;
-    font-size: 30px;
-    width: 100%;
+    font-size: 48px;
     text-align: center;
     color: white;
-    margin-top: 50px;
-}
-
-.vision, .mission{
+    padding-top: 100px;
+  }
+  
+  .profile-container {
+    display: flex;
+    flex-direction: row;
+    gap: 6rem;
+    padding: 0 10%;
+    flex-wrap: wrap; /* make responsive */
+  }
+  
+  .vision, .mission {
+    flex: 1 1 300px; /* responsive flex */
     color: white;
-}
-
-.vision >h2, .mission > h2{
+  }
+  
+  .vision > h2, .mission > h2 {
     font-family: monospace;
     text-align: center;
-    font-size: 24px;
-}
-
-.vision>p, .mission>p{
-    font-family: courier;
-    padding: 10%;
+    font-size: 32px;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+  }
+  
+  .vision > p, .mission > p {
+    font-family: Courier;
+    padding: 2rem;
     text-align: justify;
-    margin-left: 20px;
-    margin-right: 20px;
-    background-color: rgba(252, 101, 184,.7);
+    background-color: rgba(145, 43, 186, 0.7);
     border-radius: 20px;
+    font-size: 20px;
+  }
+  
+  .vision > p:hover, .mission > p:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 1);
+    background-color: rgb(174, 85, 221);
+    
+  }
+  
+/* Styling for the headquarters section */
+.headquarters {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: white;
+    border-radius: 10px;
 }
 
-table{
-    border-top: 1px solid gray;
-}
-th{
-    border-bottom: lightgray 1px solid;
-    border-collapse: collapse;
-    padding: 10px;
-    justify-content: center; 
-    background: lightgray;
+.headquarters h2 {
+    font-family: monospace;
+    font-size: 36px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-bottom: 30px;
 }
 
-td{
-    border-bottom: gray 1px solid;
-    border-collapse: collapse;
-    padding: 10px;
+/* Container for all headquarters cards */
+.hq-container {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 20px;
+}
+
+/* Styling for each headquarters card */
+.hq-card {
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.hq-card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    opacity: 1;
+    background-color: #2d2c2a;
+}
+
+.hq-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-top: 20px;
+}
+
+/* Styling for the location text inside each card */
+.hq-location {
+    padding: 15px;
+    font-family: 'Courier New';
+    color: white;
+}
+
+.hq-location > h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.hq-location > p {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+/* Special styling for the "Coming Soon" card */
+.coming-soon {
+    background-color: rgba(0, 0, 0,);
+}
+
+.coming-soon h3 {
+    color: #ffdf00;
+}
+
+.coming-soon p {
+    color: #fff;
+}
+
+/* Main container for form and table */
+.form-table-container {
+    display: flex;
+    gap: 100px;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap; /* optional: makes it stack on small screens */
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+/* Styling for the form */
+.message-us h2{
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-bottom: 50px;
+    font-size: 36px;
+    font-family: monospace;
+    color: rgb(255, 255, 255);
+}
+
+.message-us form {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding-right: 80px;
+    height: 550px; /* fix tinggi agar sejajar dengan .output-box */
+    box-sizing: border-box;
+}
+
+/* Styling for the table box */
+.output-box {
+    background-color: white;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    flex: 1.5;
+    overflow-x: auto;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-height: 550px;          /* fix tinggi box */
+    overflow-y: auto;           /* scroll jika konten terlalu panjang */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* General styles for table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    word-wrap: break-word;      /* bantu wrap teks panjang */
+    word-break: break-word;     /* paksa putus kata panjang */
+    white-space: normal;        /* ini yang mengizinkan wrap */
+    max-width: 120px;           /* batas maksimal lebar kolom */
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: #f2f2f2;
+    z-index: 1;
+}
+
+td button {
+    background-color: transparent;
+    color: red;
+    text-decoration: underline;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+td button:hover {
+    background-color: transparent;
+    color: darkred;
+}
+
+/* Other existing styles */
+form label {
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="date"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.gender-options {
+    display: flex;
+    gap: 20px;
+}
+
+form button {
+    width: fit-content;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+.error-msg {
+    color: red;
+    font-size: 13px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    display: block;
 }
